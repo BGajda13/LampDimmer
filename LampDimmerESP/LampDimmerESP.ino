@@ -32,7 +32,7 @@ void setup() {
   Serial.println(WiFi.localIP());
 
   server.on("/", HTTP_GET, handleRoot);        // Call the 'handleRoot' function when a client requests URI "/"
-  server.on("/lamp", HTTP_POST, handleLamp); // Call the 'handleLogin' function when a POST request is made to URI "/login"
+  server.on("/lamp", HTTP_POST, handleLamp); // Call the 'handleLamp' function when a POST request is made to URI "/lamp"
   server.onNotFound(handleNotFound);           // When a client requests an unknown URI (i.e. something other than "/"), call function "handleNotFound"
 
   server.begin();                            // Actually start the server
